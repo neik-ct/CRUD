@@ -45,7 +45,7 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', UserSchema);
 
-// ==================== API ENDPOINTS ====================
+
 
 // GET - Lấy danh sách users (có phân trang + tìm kiếm)
 app.get('/api/users', async (req, res) => {
