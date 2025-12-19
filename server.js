@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Kết nối MongoDB
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/user-management';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://20225349:20225349@cluster0.z2qsxba.mongodb.net/?appName=Cluster0';
 
 mongoose.connect(MONGODB_URI)
   .then(() => {

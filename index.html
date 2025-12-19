@@ -6,7 +6,7 @@
     <title>Quản Lý Người Dùng</title>
     <link rel="stylesheet" href="styles.css">
     
-    <!-- React và ReactDOM từ CDN -->
+    
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -17,7 +17,7 @@
     <script type="text/babel">
         const { useState, useEffect } = React;
 
-        // ==================== Component SearchBar ====================
+    
         function SearchBar({ search, onSearchChange }) {
             return (
                 <div className="search-bar">
@@ -31,7 +31,7 @@
             );
         }
 
-        // ==================== Component UserTable ====================
+       
         function UserTable({ users, currentPage, limit, onEdit, onDelete }) {
             return (
                 <table>
@@ -86,7 +86,7 @@
             );
         }
 
-        // ==================== Component Pagination ====================
+       
         function Pagination({ page, totalPages, limit, onPageChange, onLimitChange }) {
             return (
                 <div className="pagination">
@@ -123,7 +123,7 @@
             );
         }
 
-        // ==================== Component UserModal ====================
+      
         function UserModal({ user, onClose, onSave }) {
             const [formData, setFormData] = useState(
                 user || { name: "", age: "", email: "", address: "" }
@@ -236,7 +236,7 @@
             );
         }
 
-        // ==================== Component App ====================
+       
         function App() {
             const [users, setUsers] = useState([]);
             const [page, setPage] = useState(1);
@@ -264,7 +264,7 @@
                     });
             };
 
-            // Load users khi component mount hoặc khi page/limit/search thay đổi
+            
             useEffect(() => {
                 fetchUsers();
             }, [page, limit, search]);
